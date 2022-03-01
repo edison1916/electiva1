@@ -1,0 +1,29 @@
+<div clas="container">
+<p *ngIf="isUsuario">Informacion sensible</p>
+<p *ngIf="!isUsuario">Informacion publica</p>
+
+    
+    <div class="card">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">nombre</th>
+                <th scope="col">apellido</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let per of personas">
+                  
+                <th scope="row">{{per.id}}</th>
+                <td>{{per.nombre}}</td>
+                <td>{{per.apellido}}</td>
+                
+              </tr>
+            
+            </tbody>
+          </table>
+    </div>
+
+</div>
